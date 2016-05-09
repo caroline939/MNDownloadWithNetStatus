@@ -1,0 +1,2 @@
+# MNDownloadWithNetStatus
+一键设置是否仅在wifi状态下下载图片
