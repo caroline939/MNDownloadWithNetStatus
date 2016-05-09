@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pq4-VI-JyH">
+                                <rect key="frame" x="37" y="184" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="7dZ-uO-teW"/>
+                                    <constraint firstAttribute="height" constant="300" id="obs-8h-0au"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gAk-If-cK9">
+                                <rect key="frame" x="172" y="526" width="30" height="30"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="仅在Wi-Fi状态下下载图片" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wxY-kV-Fcm">
+                                <rect key="frame" x="90" y="524" width="194" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ouK-zy-1dg">
+                                <rect key="frame" x="163" y="559" width="51" height="31"/>
+                                <connections>
+                                    <action selector="setSwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="Jqe-5E-RZd"/>
+                                </connections>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tdd-Gn-lBc">
+                                <rect key="frame" x="157" y="611" width="60" height="30"/>
+                                <state key="normal" title="清除缓存"/>
+                                <connections>
+                                    <action selector="clearMemory:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3VC-KS-MNK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gAk-If-cK9" firstAttribute="centerX" secondItem="wxY-kV-Fcm" secondAttribute="centerX" id="1d3-wl-Hxy"/>
+                            <constraint firstItem="Pq4-VI-JyH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5ie-JB-nkS"/>
+                            <constraint firstItem="ouK-zy-1dg" firstAttribute="top" secondItem="gAk-If-cK9" secondAttribute="bottom" constant="3" id="70h-kz-2hE"/>
+                            <constraint firstItem="gAk-If-cK9" firstAttribute="centerX" secondItem="ouK-zy-1dg" secondAttribute="centerX" id="JvN-bh-33e"/>
+                            <constraint firstItem="gAk-If-cK9" firstAttribute="top" secondItem="Pq4-VI-JyH" secondAttribute="bottom" constant="42" id="R3O-aV-HWy"/>
+                            <constraint firstItem="ouK-zy-1dg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WB0-uI-qGD"/>
+                            <constraint firstItem="Pq4-VI-JyH" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="gZt-Yz-3os"/>
+                            <constraint firstItem="ouK-zy-1dg" firstAttribute="top" secondItem="wxY-kV-Fcm" secondAttribute="bottom" constant="14" id="lPV-6g-sFo"/>
+                            <constraint firstItem="gAk-If-cK9" firstAttribute="firstBaseline" secondItem="wxY-kV-Fcm" secondAttribute="baseline" id="nih-2l-IaM"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="imageView" destination="Pq4-VI-JyH" id="1eg-Ug-PGD"/>
+                        <outlet property="turnonAndOff" destination="ouK-zy-1dg" id="TBc-9F-gCs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
